@@ -1,4 +1,5 @@
-﻿namespace WindowsFormsMain
+﻿using WindowsFormsMain.DBDataSet;
+namespace WindowsFormsMain
 {
     partial class DisciplinesMainForm
     {
@@ -43,10 +44,10 @@
             this.labelForName = new System.Windows.Forms.Label();
             this.dataGridViewDIsciplines = new System.Windows.Forms.DataGridView();
             this.dIsciplinesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.educationDBDataSetDisciplines = new WindowsFormsMain.EducationDBDataSetDisciplines();
-            this.educationDBDataSet = new WindowsFormsMain.EducationDBDataSet();
+            this.educationDBDataSetDisciplines = new EducationDBDataSetDisciplines();
+            this.educationDBDataSet = new EducationDBDataSet();
             this.educationDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dIsciplinesTableAdapter = new WindowsFormsMain.EducationDBDataSetDisciplinesTableAdapters.DIsciplinesTableAdapter();
+            this.dIsciplinesTableAdapter = new DBDataSet.EducationDBDataSetDisciplinesTableAdapters.DIsciplinesTableAdapter();
             this.disciplineIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -296,7 +297,7 @@
         private EducationDBDataSet educationDBDataSet;
         private EducationDBDataSetDisciplines educationDBDataSetDisciplines;
         private System.Windows.Forms.BindingSource dIsciplinesBindingSource;
-        private EducationDBDataSetDisciplinesTableAdapters.DIsciplinesTableAdapter dIsciplinesTableAdapter;
+        private DBDataSet.EducationDBDataSetDisciplinesTableAdapters.DIsciplinesTableAdapter dIsciplinesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn disciplineIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;

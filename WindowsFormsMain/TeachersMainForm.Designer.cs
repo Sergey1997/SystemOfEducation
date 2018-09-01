@@ -1,4 +1,8 @@
-﻿namespace WindowsFormsMain
+﻿using WindowsFormsMain.DBDataSet;
+using System.Windows.Forms;
+using System.ComponentModel;
+
+namespace WindowsFormsMain
 {
     partial class TeachersMainForm
     {
@@ -28,36 +32,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.labelForName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.dataGridViewTeachers = new System.Windows.Forms.DataGridView();
-            this.teachersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.educationDBDataSet = new WindowsFormsMain.EducationDBDataSet();
-            this.labelForDate = new System.Windows.Forms.Label();
-            this.labelForPosition = new System.Windows.Forms.Label();
-            this.labelForNumber = new System.Windows.Forms.Label();
-            this.labelForDepartmentName = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.buttonDelete = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.labelForFilter = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.labelForDiscipline = new System.Windows.Forms.Label();
-            this.teachersTableAdapter = new WindowsFormsMain.EducationDBDataSetTableAdapters.TeachersTableAdapter();
-            this.teacherIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teacherNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.positionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.components = new Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            this.labelForName = new Label();
+            this.textBox1 = new TextBox();
+            this.buttonSave = new Button();
+            this.dataGridViewTeachers = new DataGridView();
+            this.teachersBindingSource = new BindingSource(this.components);
+            this.educationDBDataSet = new EducationDBDataSet();
+            this.labelForDate = new Label();
+            this.labelForPosition = new Label();
+            this.labelForNumber = new Label();
+            this.labelForDepartmentName = new Label();
+            this.textBox3 = new TextBox();
+            this.textBox4 = new TextBox();
+            this.textBox5 = new TextBox();
+            this.buttonDelete = new Button();
+            this.buttonCancel = new Button();
+            this.dateTimePicker = new DateTimePicker();
+            this.textBox2 = new TextBox();
+            this.labelForFilter = new Label();
+            this.textBox6 = new TextBox();
+            this.labelForDiscipline = new Label();
+            this.teachersTableAdapter = new DBDataSet.EducationDBDataSetTableAdapters.TeachersTableAdapter();
+            this.teacherIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            this.teacherNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            this.positionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            this.numberDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            this.departmentDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeachers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.educationDBDataSet)).BeginInit();
@@ -354,35 +358,35 @@
 
         #endregion
         
-        private System.Windows.Forms.DataGridView dataGridViewTeachers;
+        private DataGridView dataGridViewTeachers;
 
-        private System.Windows.Forms.Label labelForName;
-        private System.Windows.Forms.Label labelForDate;
-        private System.Windows.Forms.Label labelForPosition;
-        private System.Windows.Forms.Label labelForNumber;
-        private System.Windows.Forms.Label labelForDepartmentName;
-        private System.Windows.Forms.Label labelForDiscipline;
-        private System.Windows.Forms.Label labelForFilter;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox6;
+        private Label labelForName;
+        private Label labelForDate;
+        private Label labelForPosition;
+        private Label labelForNumber;
+        private Label labelForDepartmentName;
+        private Label labelForDiscipline;
+        private Label labelForFilter;
+        private TextBox textBox1;
+        private DateTimePicker dateTimePicker;
+        private TextBox textBox3;
+        private TextBox textBox4;
+        private TextBox textBox5;
+        private Button buttonSave;
+        private Button buttonDelete;
+        private Button buttonCancel;
+        private TextBox textBox2;
+        private TextBox textBox6;
 
         private EducationDBDataSet educationDBDataSet;
         private System.Windows.Forms.BindingSource teachersBindingSource;
-        private EducationDBDataSetTableAdapters.TeachersTableAdapter teachersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn teacherIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn teacherNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn positionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn departmentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private DBDataSet.EducationDBDataSetTableAdapters.TeachersTableAdapter teachersTableAdapter;
+        private DataGridViewTextBoxColumn teacherIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn teacherNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn positionDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn departmentDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

@@ -1,4 +1,11 @@
-﻿namespace WindowsFormsMain
+﻿using WindowsFormsMain.DBDataSet;
+using System.Windows.Forms;
+
+using WindowsFormsMain.DBDataSet.EducationDBDataSetDepartmentsTableAdapters;
+using System.ComponentModel;
+using System.Drawing;
+
+namespace WindowsFormsMain
 {
     partial class DepartmentsMainForm
     {
@@ -29,7 +36,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
@@ -48,8 +55,8 @@
             this.managerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.facultyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.educationDBDataSetDepartments = new WindowsFormsMain.EducationDBDataSetDepartments();
-            this.departmentsTableAdapter = new WindowsFormsMain.EducationDBDataSetDepartmentsTableAdapters.DepartmentsTableAdapter();
+            this.educationDBDataSetDepartments = new WindowsFormsMain.DBDataSet.EducationDBDataSetDepartments();
+            this.departmentsTableAdapter = new WindowsFormsMain.DBDataSet.EducationDBDataSetDepartmentsTableAdapters.DepartmentsTableAdapter();
             this.labelForFilter = new System.Windows.Forms.Label();
             this.buttonToDepartment = new System.Windows.Forms.Button();
             this.comboBoxFilter = new System.Windows.Forms.ComboBox();
@@ -172,14 +179,14 @@
             this.managerDataGridViewTextBoxColumn,
             this.facultyDataGridViewTextBoxColumn});
             this.dataGridViewDepartments.DataSource = this.departmentsBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(238)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(202)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewDepartments.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(238)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(202)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewDepartments.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewDepartments.Location = new System.Drawing.Point(354, 24);
             this.dataGridViewDepartments.Name = "dataGridViewDepartments";
             this.dataGridViewDepartments.RowHeadersWidth = 30;
@@ -312,29 +319,29 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.TextBox textBoxForFaculty;
-        private System.Windows.Forms.TextBox textBoxForManager;
-        private System.Windows.Forms.TextBox textBoxForNumber;
-        private System.Windows.Forms.TextBox textBoxForName;
-        private System.Windows.Forms.Label labelForFaculty;
-        private System.Windows.Forms.Label labelForManager;
-        private System.Windows.Forms.Label labelForNumber;
-        private System.Windows.Forms.Label labelForName;
-        private System.Windows.Forms.DataGridView dataGridViewDepartments;
+        private Button buttonSave;
+        private Button buttonCancel;
+        private Button buttonDelete;
+        private TextBox textBoxForFaculty;
+        private TextBox textBoxForManager;
+        private TextBox textBoxForNumber;
+        private TextBox textBoxForName;
+        private Label labelForFaculty;
+        private Label labelForManager;
+        private Label labelForNumber;
+        private Label labelForName;
+        private DataGridView dataGridViewDepartments;
         private EducationDBDataSetDepartments educationDBDataSetDepartments;
-        private System.Windows.Forms.BindingSource departmentsBindingSource;
-        private EducationDBDataSetDepartmentsTableAdapters.DepartmentsTableAdapter departmentsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn departmentIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn managerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn facultyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label labelForFilter;
-        private System.Windows.Forms.Button buttonToDepartment;
-        private System.Windows.Forms.ComboBox comboBoxFilter;
-        private System.Windows.Forms.BindingSource departmentsBindingSource1;
+        private BindingSource departmentsBindingSource;
+        private DBDataSet.EducationDBDataSetDepartmentsTableAdapters.DepartmentsTableAdapter departmentsTableAdapter;
+        private DataGridViewTextBoxColumn departmentIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn managerDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn facultyDataGridViewTextBoxColumn;
+        private Label labelForFilter;
+        private Button buttonToDepartment;
+        private ComboBox comboBoxFilter;
+        private BindingSource departmentsBindingSource1;
     }
 }

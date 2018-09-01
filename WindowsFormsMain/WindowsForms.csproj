@@ -32,12 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -90,17 +84,17 @@
     <Compile Include="DisciplinesMainForm.Designer.cs">
       <DependentUpon>DisciplinesMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EducationDBDataSet.Designer.cs">
+    <Compile Include="DBDataSet\EducationDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EducationDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="EducationDBDataSetDepartments.Designer.cs">
+    <Compile Include="DBDataSet\EducationDBDataSetDepartments.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EducationDBDataSetDepartments.xsd</DependentUpon>
     </Compile>
-    <Compile Include="EducationDBDataSetDisciplines.Designer.cs">
+    <Compile Include="DBDataSet\EducationDBDataSetDisciplines.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EducationDBDataSetDisciplines.xsd</DependentUpon>
@@ -147,40 +141,39 @@
     <None Include="Data\EducationDbModel.edmx.diagram">
       <DependentUpon>EducationDbModel.edmx</DependentUpon>
     </None>
-    <None Include="EducationDBDataSet.xsc">
+    <None Include="DBDataSet\EducationDBDataSet.xsc">
       <DependentUpon>EducationDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="EducationDBDataSet.xsd">
+    <None Include="DBDataSet\EducationDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>EducationDBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="EducationDBDataSet.xss">
+    <None Include="DBDataSet\EducationDBDataSet.xss">
       <DependentUpon>EducationDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="EducationDBDataSetDepartments.xsc">
+    <None Include="DBDataSet\EducationDBDataSetDepartments.xsc">
       <DependentUpon>EducationDBDataSetDepartments.xsd</DependentUpon>
     </None>
-    <None Include="EducationDBDataSetDepartments.xsd">
+    <None Include="DBDataSet\EducationDBDataSetDepartments.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>EducationDBDataSetDepartments.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="EducationDBDataSetDepartments.xss">
+    <None Include="DBDataSet\EducationDBDataSetDepartments.xss">
       <DependentUpon>EducationDBDataSetDepartments.xsd</DependentUpon>
     </None>
-    <None Include="EducationDBDataSetDisciplines.xsc">
+    <None Include="DBDataSet\EducationDBDataSetDisciplines.xsc">
       <DependentUpon>EducationDBDataSetDisciplines.xsd</DependentUpon>
     </None>
-    <None Include="EducationDBDataSetDisciplines.xsd">
+    <None Include="DBDataSet\EducationDBDataSetDisciplines.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>EducationDBDataSetDisciplines.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="EducationDBDataSetDisciplines.xss">
+    <None Include="DBDataSet\EducationDBDataSetDisciplines.xss">
       <DependentUpon>EducationDBDataSetDisciplines.xsd</DependentUpon>
     </None>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -197,7 +190,11 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.2.0</Version>
+    </PackageReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Data\EducationDbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
