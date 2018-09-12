@@ -21,6 +21,11 @@ namespace WindowsFormsMain
             InitializeComponent();
         }
 
+        /// <summary>
+        /// some comment.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DisciplinesMainForm_Load(object sender, EventArgs e)
         {
             this.dIsciplinesTableAdapter.Fill(this.educationDBDataSetDisciplines.DIsciplines);
