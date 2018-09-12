@@ -23,9 +23,7 @@ namespace WindowsFormsMain
 
         private void DisciplinesMainForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'educationDBDataSetDisciplines.DIsciplines' table. You can move, or remove it, as needed.
             this.dIsciplinesTableAdapter.Fill(this.educationDBDataSetDisciplines.DIsciplines);
-
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
